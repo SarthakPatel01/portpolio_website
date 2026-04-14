@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SARTHAK PATEL | AI &amp; Flutter Developer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#e5e8ee",
+                    "outline-variant": "#40485d",
+                    "on-tertiary-container": "#53575c",
+                    "inverse-on-surface": "#4d556b",
+                    "on-secondary": "#280067",
+                    "primary-fixed-dim": "#5391ff",
+                    "primary": "#85adff",
+                    "secondary-fixed": "#dac9ff",
+                    "surface-variant": "#192540",
+                    "on-tertiary-fixed-variant": "#64686e",
+                    "surface-container": "#0f1930",
+                    "on-surface-variant": "#a3aac4",
+                    "surface-bright": "#1f2b49",
+                    "primary-dim": "#699cff",
+                    "on-primary-fixed-variant": "#002a62",
+                    "on-error-container": "#ffa8a3",
+                    "surface-tint": "#85adff",
+                    "tertiary-dim": "#e5e8ee",
+                    "surface-container-lowest": "#000000",
+                    "secondary-container": "#5516be",
+                    "on-primary-fixed": "#000000",
+                    "on-background": "#dee5ff",
+                    "on-error": "#490006",
+                    "surface-dim": "#060e20",
+                    "error": "#ff716c",
+                    "inverse-primary": "#005bc4",
+                    "surface": "#060e20",
+                    "secondary-fixed-dim": "#ceb9ff",
+                    "on-surface": "#dee5ff",
+                    "background": "#060e20",
+                    "inverse-surface": "#faf8ff",
+                    "on-tertiary": "#5b5f65",
+                    "secondary-dim": "#8455ef",
+                    "on-secondary-fixed-variant": "#5f28c8",
+                    "surface-container-highest": "#192540",
+                    "tertiary": "#f6f9ff",
+                    "on-primary-container": "#002150",
+                    "primary-container": "#6e9fff",
+                    "surface-container-high": "#141f38",
+                    "outline": "#6d758c",
+                    "tertiary-fixed": "#f3f7fd",
+                    "on-tertiary-fixed": "#474c51",
+                    "error-container": "#9f0519",
+                    "secondary": "#ac8aff",
+                    "on-secondary-fixed": "#40009b",
+                    "error-dim": "#d7383b",
+                    "on-secondary-container": "#d9c8ff",
+                    "tertiary-container": "#e7ebf1",
+                    "primary-fixed": "#6e9fff",
+                    "on-primary": "#002c66",
+                    "surface-container-low": "#091328"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        html { scroll-behavior: smooth; }
+        body { background-color: #060E20; color: #DEE5FF; font-family: 'Inter', sans-serif; }
+        .glass-card {
+            background: rgba(25, 37, 64, 0.7);
+            backdrop-filter: blur(12px);
+            border-top: 1px solid rgba(64, 72, 93, 0.25);
+            border-left: 1px solid rgba(64, 72, 93, 0.25);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#192540]/60 backdrop-blur-xl shadow-[0_0_32px_rgba(133,173,255,0.05)] border-t border-l border-[#40485D]/15">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
+<div class="text-xl font-black tracking-tighter text-[#DEE5FF] font-['Inter']">SARTHAK PATEL</div>
+<!-- Desktop Links -->
+<div class="hidden md:flex items-center space-gap-8 gap-8">
+<a class="text-[#85ADFF] font-bold border-b-2 border-[#AC8AFF] pb-1 font-['Inter'] tracking-tight" href="#hero">Hero</a>
+<a class="text-[#A3AAC4] hover:text-[#DEE5FF] transition-colors duration-300 font-['Inter'] tracking-tight" href="#about">About</a>
+<a class="text-[#A3AAC4] hover:text-[#DEE5FF] transition-colors duration-300 font-['Inter'] tracking-tight" href="#skills">Skills</a>
+<a class="text-[#A3AAC4] hover:text-[#DEE5FF] transition-colors duration-300 font-['Inter'] tracking-tight" href="#projects">Projects</a>
+<a class="text-[#A3AAC4] hover:text-[#DEE5FF] transition-colors duration-300 font-['Inter'] tracking-tight" href="#experience">Experience</a>
+<a class="text-[#A3AAC4] hover:text-[#DEE5FF] transition-colors duration-300 font-['Inter'] tracking-tight" href="#contact">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="scale-105 transition-transform text-[#85ADFF] hover:text-[#AC8AFF]">
+<span class="material-symbols-outlined" data-icon="dark_mode">dark_mode</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden" id="hero">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(133,173,255,0.1),_transparent_70%)]"></div>
+<div class="max-w-7xl mx-auto px-8 w-full grid lg:grid-cols-2 gap-12 relative z-10">
+<div class="flex flex-col justify-center space-y-8">
+<div class="space-y-4">
+<span class="inline-block px-4 py-1 rounded-full bg-surface-container-high text-primary font-label font-bold text-xs tracking-widest uppercase">Available for Hire</span>
+<h1 class="text-6xl md:text-8xl font-black tracking-tighter text-on-surface">
+                        Sarthak <span class="bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent">Patel</span>
+</h1>
+<p class="text-xl md:text-2xl font-medium text-on-surface-variant font-headline">
+                        AI Developer | Flutter Developer | Conversational AI Enthusiast
+                    </p>
+<p class="text-lg text-outline max-w-lg leading-relaxed">
+                        Building the next generation of intelligent digital experiences through deep learning and fluid mobile interfaces.
+                    </p>
+</div>
+<div class="flex flex-wrap gap-4">
+<a class="px-8 py-4 bg-gradient-to-r from-primary to-secondary text-on-primary-container font-bold rounded-xl hover:shadow-[0_0_24px_rgba(133,173,255,0.3)] transition-all duration-300 scale-100 hover:scale-105 active:scale-95" href="#contact">
+                        Hire Me
+                    </a>
+<a class="px-8 py-4 border border-outline/30 text-primary font-bold rounded-xl hover:bg-surface-container-high transition-all duration-300" href="#projects">
+                        View Projects
+                    </a>
+</div>
+</div>
+<div class="hidden lg:flex justify-center items-center relative">
+<div class="w-[450px] h-[450px] rounded-[3rem] glass-card p-4 rotate-3 shadow-[0_0_64px_rgba(133,173,255,0.05)]">
+<img alt="Developer Workspace" class="w-full h-full object-cover rounded-[2.5rem]" data-alt="Modern dark developer workspace with multiple monitors showing lines of code and blue ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxywGajHWOWzGvetQtatf7TnktCB0MwbxrMEq02dMxHjCDVa-mapxHU9HnKozzkmkax4iQiZtX9XbTUeVqO_zc_9eBORuzHEsgdNFRqI9_BH-bdpqoSnfGdSn3nG-Zvnhot2XFO5LTFej6f9gIjTU8hDqRrwN7U4I2V8AYcPbxHj_nGdGEqD3xtdLmjb55u4xNA1KR3ljoyAElOhZtLDCblo6GWZCZb2ALIFtkGJRv0mBsOgviJOMJcqDacl69dqRVa_DmIVh7yw"/>
+</div>
+<div class="absolute -bottom-8 -left-8 glass-card p-6 rounded-2xl border border-outline-variant/20">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary-container rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-container">psychology</span>
+</div>
+<div>
+<p class="text-xs font-bold text-outline tracking-widest uppercase">Innovation</p>
+<p class="text-sm font-headline text-on-surface">Neural Architecture</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-32 bg-surface-container-low" id="about">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid lg:grid-cols-12 gap-16 items-center">
+<div class="lg:col-span-5 relative">
+<div class="aspect-square rounded-3xl overflow-hidden shadow-2xl">
+<img alt="Sarthak Patel" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Professional portrait of a young male software developer with a friendly expression in a modern architectural setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZJWmN4ydJzuqp-WJ0paZFZFHYkG9f0mhYVFKfUQrH_pRymG2nWTTpGmo-XDGZe6aquP3IVVI7B-LnoIaROBLd0mViZ6OReHQvcT47UaIztNW9HKfLH3BCaC4vqDcnqMps-OSB2cIcnqlddRVoMGsmYLA3HYxHSvSVagHT0Gy73-7d3_F3Spcyt4B1g1tkU_ehF_ovcuFmJrC59UumzagWCZdz2dTmPBsBZ6EPnGjFJ3E6iq7RI3_aoYipWSQPiLEiWgi-lrahSg"/>
+</div>
+<div class="absolute -z-10 -top-10 -left-10 w-40 h-40 bg-secondary/10 blur-3xl rounded-full"></div>
+<div class="absolute -z-10 -bottom-10 -right-10 w-40 h-40 bg-primary/10 blur-3xl rounded-full"></div>
+</div>
+<div class="lg:col-span-7 space-y-8">
+<div class="space-y-4">
+<h2 class="text-4xl md:text-5xl font-black tracking-tight text-on-surface">Pioneering <span class="text-primary">Intelligent</span> Software</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                            Hello! I'm Sarthak Patel, a developer dedicated to merging the raw power of Artificial Intelligence with the seamless user experience of Flutter. My journey is fueled by curiosity and a commitment to solving complex problems through elegant code.
+                        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="p-6 rounded-2xl bg-surface-container-high hover:bg-surface-bright transition-colors group">
+<span class="material-symbols-outlined text-primary mb-4 block group-hover:scale-110 transition-transform">neurology</span>
+<h3 class="font-bold text-on-surface mb-2">AI</h3>
+<p class="text-sm text-outline">Natural Language Processing &amp; Generative models.</p>
+</div>
+<div class="p-6 rounded-2xl bg-surface-container-high hover:bg-surface-bright transition-colors group">
+<span class="material-symbols-outlined text-secondary mb-4 block group-hover:scale-110 transition-transform">phone_iphone</span>
+<h3 class="font-bold text-on-surface mb-2">Flutter</h3>
+<p class="text-sm text-outline">Crafting pixel-perfect cross-platform experiences.</p>
+</div>
+<div class="p-6 rounded-2xl bg-surface-container-high hover:bg-surface-bright transition-colors group">
+<span class="material-symbols-outlined text-primary-fixed-dim mb-4 block group-hover:scale-110 transition-transform">web</span>
+<h3 class="font-bold text-on-surface mb-2">Web</h3>
+<p class="text-sm text-outline">Building scalable and responsive modern web apps.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Skills Section -->
+<section class="py-32" id="skills">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-20 space-y-4">
+<h2 class="text-4xl md:text-5xl font-black text-on-surface">Tech Stack</h2>
+<p class="text-outline max-w-xl mx-auto">The tools and technologies I use to bring digital visions to life.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+<!-- Skill 1 -->
+<div class="glass-card p-8 rounded-3xl flex flex-col items-center text-center space-y-4 group hover:shadow-[0_0_32px_rgba(133,173,255,0.1)] transition-all">
+<div class="w-16 h-16 rounded-2xl bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">terminal</span>
+</div>
+<span class="font-bold text-on-surface">Python</span>
+<div class="w-full h-1 bg-surface-container-low rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[95%] transition-all"></div>
+</div>
+</div>
+<!-- Skill 2 -->
+<div class="glass-card p-8 rounded-3xl flex flex-col items-center text-center space-y-4 group hover:shadow-[0_0_32px_rgba(133,173,255,0.1)] transition-all">
+<div class="w-16 h-16 rounded-2xl bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-4xl">javascript</span>
+</div>
+<span class="font-bold text-on-surface">JavaScript</span>
+<div class="w-full h-1 bg-surface-container-low rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[85%] transition-all"></div>
+</div>
+</div>
+<!-- Skill 3 -->
+<div class="glass-card p-8 rounded-3xl flex flex-col items-center text-center space-y-4 group hover:shadow-[0_0_32px_rgba(133,173,255,0.1)] transition-all">
+<div class="w-16 h-16 rounded-2xl bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-4xl">flutter</span>
+</div>
+<span class="font-bold text-on-surface">Flutter</span>
+<div class="w-full h-1 bg-surface-container-low rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[90%] transition-all"></div>
+</div>
+</div>
+<!-- Skill 4 -->
+<div class="glass-card p-8 rounded-3xl flex flex-col items-center text-center space-y-4 group hover:shadow-[0_0_32px_rgba(133,173,255,0.1)] transition-all">
+<div class="w-16 h-16 rounded-2xl bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-4xl">bolt</span>
+</div>
+<span class="font-bold text-on-surface">AI/ML</span>
+<div class="w-full h-1 bg-surface-container-low rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[80%] transition-all"></div>
+</div>
+</div>
+<!-- Skill 5 -->
+<div class="glass-card p-8 rounded-3xl flex flex-col items-center text-center space-y-4 group hover:shadow-[0_0_32px_rgba(133,173,255,0.1)] transition-all">
+<div class="w-16 h-16 rounded-2xl bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-4xl">api</span>
+</div>
+<span class="font-bold text-on-surface">REST APIs</span>
+<div class="w-full h-1 bg-surface-container-low rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[88%] transition-all"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Section (Bento Grid) -->
+<section class="py-32 bg-surface-container-low" id="projects">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+<div class="space-y-4">
+<h2 class="text-4xl md:text-5xl font-black text-on-surface">Featured <span class="text-primary">Creations</span></h2>
+<p class="text-outline">A selection of my recent work in AI and mobile development.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-6 gap-6">
+<!-- Large Project Card -->
+<div class="md:col-span-4 glass-card rounded-[2rem] overflow-hidden group flex flex-col h-full">
+<div class="h-64 md:h-80 relative overflow-hidden">
+<img alt="AI Chat Interface" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A sophisticated AI chat interface dashboard with clean glassmorphism cards and data visualization widgets" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABRNfBveB5qT4GeGibrcORi-Ya_jPxdne0Oi_XlpTIV2guDfLjK3f4Y6JDYnnIudLEsUyFvrr4LdF_boj8bb8iam8fKt2wz1WD4gm67L_bMAHC9TzC2QTnYm11lMjfnOu7458Y7-JaWoxrbyn1iBkz9n1XCkSLtf_AuGhnTZmGxDdjl71GXEdGdTXnLXq4bHIpzwp1eOExRXCc7d7hY78yIDqYGs8xSNnVN1nqhOLh-N9kvLKSC1UPbKzAsaT6n1CdCT9Kyv_7mA"/>
+</div>
+<div class="p-8 flex flex-col flex-grow space-y-4">
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 rounded-full bg-primary-container/20 text-primary-fixed-dim text-xs font-bold uppercase tracking-wider">Python</span>
+<span class="px-3 py-1 rounded-full bg-primary-container/20 text-primary-fixed-dim text-xs font-bold uppercase tracking-wider">OpenAI</span>
+</div>
+<h3 class="text-2xl font-bold text-on-surface">Neural Nexus AI</h3>
+<p class="text-on-surface-variant flex-grow">Advanced conversational agent integrated with GPT-4 for semantic code analysis and automated documentation generation.</p>
+<div class="flex gap-4 pt-4">
+<button class="flex items-center gap-2 text-primary hover:text-secondary transition-colors font-bold">
+<span class="material-symbols-outlined text-sm">link</span> Live Demo
+                            </button>
+<button class="flex items-center gap-2 text-outline hover:text-on-surface transition-colors font-bold">
+<span class="material-symbols-outlined text-sm">code</span> GitHub
+                            </button>
+</div>
+</div>
+</div>
+<!-- Small Project Card 1 -->
+<div class="md:col-span-2 glass-card rounded-[2rem] overflow-hidden group flex flex-col h-full">
+<div class="h-48 relative overflow-hidden">
+<img alt="Flutter Mobile App" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Three smartphone screens showing a vibrant mobile fitness tracking application with dark mode UI" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIRYjJtlb8La7L7Cav11s9HXnJUDzmioVshO544Ofwru1Jft-EC_No0KmxiSxc9xs3PTVDKisaoG3hkHH7W_4Nf7yGfmVmbf-PYp7dd8znzAGlQ83_Jre0ap-3f5Qer7FEmykajTxM_TintuFA4jJKO1pfeep39mztuirinFLYyKSG91nkPZ08-6un2DAf1DNjZT-yp6v2wL9c-RmCRTFaPhGWyLC17LSrsd_KxWqxTbvWmXMfMugpXFBmK9_4aLWlVLVR3en0pw"/>
+</div>
+<div class="p-6 flex flex-col flex-grow space-y-4">
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 rounded-full bg-secondary-container/20 text-secondary-fixed-dim text-xs font-bold uppercase tracking-wider">Flutter</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface">Pulse Fitness</h3>
+<p class="text-sm text-on-surface-variant flex-grow">Cross-platform health tracking app with real-time biometric synchronization.</p>
+<div class="flex gap-4 pt-2">
+<button class="text-primary hover:text-secondary font-bold text-sm">GitHub</button>
+</div>
+</div>
+</div>
+<!-- Small Project Card 2 -->
+<div class="md:col-span-2 glass-card rounded-[2rem] overflow-hidden group flex flex-col h-full">
+<div class="h-48 relative overflow-hidden">
+<img alt="Data Visualizer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Interactive 3D data visualization charts on a dark background with neon glowing highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5Z57b4TjcJSzbjFCn3UQsmohw7Yu0QmfVCVsJdtYtnPrYQCg03A0wY1MtdVPqj05zcHOpNVb27wuTXLig60zaTeDLGDqNoEF71IMtPtNImBLMVUCC9tmmdmh6KU8X6SuZSWe_5M3jHMD86oa74xP-rdbHywIjkHJu6KJd2OQu--hrmYqa2bi7mSkaT5oBQN0TutjfrZFrRzjLkEj4VKraLGR95dqyS-njIbr-7QYlC5DVhQD_iyNEfxI8wC7DRMMeQ-11mgrtFg"/>
+</div>
+<div class="p-6 flex flex-col flex-grow space-y-4">
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 rounded-full bg-primary-container/20 text-primary-fixed-dim text-xs font-bold uppercase tracking-wider">JS</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface">VisualSynth</h3>
+<p class="text-sm text-on-surface-variant flex-grow">Dynamic data visualization library built for high-performance neural network training monitoring.</p>
+<div class="flex gap-4 pt-2">
+<button class="text-primary hover:text-secondary font-bold text-sm">GitHub</button>
+</div>
+</div>
+</div>
+<!-- Medium Project Card -->
+<div class="md:col-span-4 glass-card rounded-[2rem] overflow-hidden group flex flex-col h-full">
+<div class="h-48 relative overflow-hidden">
+<img alt="Cybersecurity Dashboard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A futuristic cybersecurity threat detection dashboard with matrix-like data streams and security alerts" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSBulsD0WgPlTiOXBaThAFiVDw4mt5kzI__0X_pQtrJ7p6w51FwArYsu1Chx_LFE_40tvlJh9v_Qf8yfh3dvHyixJtUonn09c7r71LDSSLsrpvQHf3EEd15uvUM3QvcIRco41JMYDVoBMEy6XRJv39bVnTSF1CJQIMOiNR94_RJza8BoJjPjKuiGfzEyjzhw6YgMexqBn7JSFNf1CpOekQA31j_jPr4f0Hbf09YJppD015_iwuRWVme8cmCCQuhONr57dWfc0Puw"/>
+</div>
+<div class="p-8 flex flex-col flex-grow space-y-4">
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 rounded-full bg-secondary-container/20 text-secondary-fixed-dim text-xs font-bold uppercase tracking-wider">FastAPI</span>
+<span class="px-3 py-1 rounded-full bg-secondary-container/20 text-secondary-fixed-dim text-xs font-bold uppercase tracking-wider">TensorFlow</span>
+</div>
+<h3 class="text-2xl font-bold text-on-surface">Sentinel AI</h3>
+<p class="text-on-surface-variant flex-grow">ML-driven threat detection system identifying anomalies in large-scale network traffic patterns in real-time.</p>
+<div class="flex gap-4 pt-4">
+<button class="flex items-center gap-2 text-primary hover:text-secondary font-bold">Live Demo</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience/Education -->
+<section class="py-32" id="experience">
+<div class="max-w-4xl mx-auto px-8">
+<h2 class="text-4xl md:text-5xl font-black text-on-surface mb-16 text-center">Milestones</h2>
+<div class="space-y-12 relative before:absolute before:left-0 md:before:left-1/2 before:h-full before:w-px before:bg-outline-variant/30">
+<!-- Item 1 -->
+<div class="relative md:flex md:justify-between items-center w-full">
+<div class="hidden md:block md:w-5/12"></div>
+<div class="absolute left-[-4px] md:left-1/2 md:-ml-2 w-4 h-4 rounded-full bg-primary shadow-[0_0_12px_#85ADFF]"></div>
+<div class="md:w-5/12 ml-8 md:ml-0 glass-card p-8 rounded-3xl border border-outline-variant/20">
+<span class="text-xs font-bold text-secondary tracking-widest uppercase mb-2 block">2021 - 2025</span>
+<h3 class="text-xl font-bold text-on-surface">B.Tech in Computer Science</h3>
+<p class="text-on-surface-variant text-sm mt-1">Silicon Institute of Technology</p>
+<p class="text-outline text-sm mt-4">Focused on core algorithms, machine learning, and software architecture fundamentals.</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="relative md:flex md:justify-between items-center w-full">
+<div class="md:w-5/12 ml-8 md:ml-0 order-2 md:order-1 glass-card p-8 rounded-3xl border border-outline-variant/20">
+<span class="text-xs font-bold text-primary tracking-widest uppercase mb-2 block">2023</span>
+<h3 class="text-xl font-bold text-on-surface">AI Developer Certification</h3>
+<p class="text-on-surface-variant text-sm mt-1">IBM</p>
+<p class="text-outline text-sm mt-4">Professional specialization in AI model deployment, ethics, and conversational AI building.</p>
+</div>
+<div class="absolute left-[-4px] md:left-1/2 md:-ml-2 w-4 h-4 rounded-full bg-secondary shadow-[0_0_12px_#AC8AFF]"></div>
+<div class="hidden md:block md:w-5/12 order-1 md:order-2"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-32 bg-surface-container-low" id="contact">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid lg:grid-cols-2 gap-16">
+<div class="space-y-8">
+<div class="space-y-4">
+<h2 class="text-4xl md:text-5xl font-black text-on-surface leading-tight">Let's <span class="text-primary">Collaborate</span> On Something Great</h2>
+<p class="text-on-surface-variant text-lg">Have a project in mind or just want to chat about AI? Drop me a message.</p>
+</div>
+<div class="space-y-6">
+<div class="flex items-center gap-6 group">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined">alternate_email</span>
+</div>
+<div>
+<p class="text-sm text-outline">Email Me</p>
+<p class="font-bold text-on-surface">sarthak.dev@example.com</p>
+</div>
+</div>
+<div class="flex items-center gap-6 group">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-secondary group-hover:bg-secondary-container group-hover:text-on-secondary-container transition-colors">
+<span class="material-symbols-outlined">map</span>
+</div>
+<div>
+<p class="text-sm text-outline">Location</p>
+<p class="font-bold text-on-surface">Bhubaneswar, India</p>
+</div>
+</div>
+</div>
+<div class="flex gap-4">
+<a class="w-12 h-12 rounded-full border border-outline/20 flex items-center justify-center hover:bg-surface-bright transition-all" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="w-12 h-12 rounded-full border border-outline/20 flex items-center justify-center hover:bg-surface-bright transition-all" href="#">
+<span class="material-symbols-outlined">link</span>
+</a>
+</div>
+</div>
+<div class="glass-card p-8 md:p-12 rounded-[2.5rem]">
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-sm font-bold text-outline ml-1">Full Name</label>
+<input class="w-full bg-surface-container-lowest border-none rounded-xl p-4 text-on-surface focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-surface outline-none" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold text-outline ml-1">Email Address</label>
+<input class="w-full bg-surface-container-lowest border-none rounded-xl p-4 text-on-surface focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-surface outline-none" placeholder="john@example.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold text-outline ml-1">Message</label>
+<textarea class="w-full bg-surface-container-lowest border-none rounded-xl p-4 text-on-surface focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-surface outline-none resize-none" placeholder="How can I help you?" rows="4"></textarea>
+</div>
+<button class="w-full py-4 bg-gradient-to-r from-primary to-secondary text-on-primary-container font-black rounded-xl hover:shadow-[0_0_24px_rgba(133,173,255,0.2)] transition-all" type="submit">
+                            Send Message
+                        </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#091328] w-full py-12 px-8 border-t border-[#40485D]/10">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto space-y-8 md:space-y-0">
+<div class="text-center md:text-left">
+<div class="text-lg font-bold text-[#DEE5FF] font-['Inter'] mb-2">SARTHAK PATEL</div>
+<p class="text-[#A3AAC4] font-['Inter'] text-sm tracking-wide">© 2024 Sarthak Patel. Built with The Neural Ledger.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-[#A3AAC4] hover:text-[#AC8AFF] transition-colors duration-300 opacity-80 hover:opacity-100 font-['Inter'] text-sm tracking-wide" href="#">GitHub</a>
+<a class="text-[#A3AAC4] hover:text-[#AC8AFF] transition-colors duration-300 opacity-80 hover:opacity-100 font-['Inter'] text-sm tracking-wide" href="#">LinkedIn</a>
+<a class="text-[#A3AAC4] hover:text-[#AC8AFF] transition-colors duration-300 opacity-80 hover:opacity-100 font-['Inter'] text-sm tracking-wide" href="#">Twitter</a>
+<a class="text-[#A3AAC4] hover:text-[#AC8AFF] transition-colors duration-300 opacity-80 hover:opacity-100 font-['Inter'] text-sm tracking-wide" href="#">Email</a>
+</div>
+</div>
+</footer>
+</body></html>
